@@ -8,31 +8,58 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Link to Css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Link to Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Reset Css -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   </head>
   <body>
-    
-    <!-- Random number placeholder -->
-    <div id="target-number">0</div>
+    <!-- Header section  -->
+    <header>
+      <h1 id="game-intro">Welcome to Crstyal Collection Game</h1>
+      <p>Click on the crystal buttons to get the game points. Your goal is to make your score matches our target number. Good luck! </p>
+    </header>
 
-    <!-- Game score -->
-    <div class="count-display">
-        <p>Wins: <span id="wins-count">0</span></p>
-        <p>Losses: <span id="losses-count">0</span></p>
+    <!-- Game general content  -->
+    <div class="container">
+      <!-- Game background -->
+      <img id="background" src="assets/images/background.png">
+
+      <!-- 1st row -->
+      <div class="row">
+        <!-- Random number placeholder -->
+        <div id="number-holder">
+          <h2>Goal:</h2>
+          <img src="assets/images/clear.png">
+        </div>
+        <div id="target-number">0</div>
+        <!-- Game score -->
+        <div class="count-display">
+          <p>Wins: <span id="wins-count">0</span></p>
+          <p>Losses: <span id="losses-count">0</span></p>
+        </div>
+      </div>
+
+      <!-- 2nd row -->
+      <div class="row">
+        <!-- buttons -->
+        <button class="crystal" value="0"><img src="assets/images/gem.png"></button>
+        <button class="crystal" value="1"><img src="assets/images/sphere.png"></button>
+        <button class="crystal" value="2"><img src="assets/images/sapphire.png"></button>
+        <button class="crystal" value="3"><img src="assets/images/swarovski.png"></button>
+      </div>
+
+      <!-- 3rd row -->
+      <div class="row">
+        <!-- Play score -->
+        <div id="number-holder">
+          <h2>Your Score:</h2>
+          <img src="assets/images/treasure-box.png">
+        </div>
+        <div id="sum">0</div>
+      </div>
+
     </div>
-
-    <div class="crystal-display">
-      <button class="crystal" value="0"><img src="assets/images/gem.png"></button>
-      <button class="crystal" value="1"><img src="assets/images/sphere.png"></button>
-      <button class="crystal" value="2"><img src="assets/images/sapphire.png"></button>
-      <button class="crystal" value="3"><img src="assets/images/swarovski.png"></button>
-    </div>
-
-
-    <!-- Play score -->
-    <div id="sum">0</div>
-    
 
     <!-- Link to Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
